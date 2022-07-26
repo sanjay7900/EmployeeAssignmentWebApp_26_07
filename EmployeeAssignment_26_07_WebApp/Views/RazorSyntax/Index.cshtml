@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Razor Syntax";
+}
+<h1>Razor Syntax</h1>
+
+@{
+    string message = "foreignObject example with Scalable Vector Graphics (SVG)";
+}
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" rx="10" ry="10" width="200" height="200" stroke="black" 
+        fill="none" />
+    <foreignObject x="20" y="20" width="160" height="160">
+        <p>@message</p>
+    </foreignObject>
+</svg>
+<p>@DateTime.Now</p>
+<p>@DateTime.IsLeapYear(2016)</p>
+@for (var i = 0; i < 10; i++)
+{
+   
+    <text>No: @i </text><br />
+}
+<h1>
+    All Even Number Between 1 to 100
+</h1>
+@for(var k=1;k<=100;k++){
+    @if (@k % 2 == 0)
+    {
+        <text> @k Is Even Number</text><br />
+    }
+}
+<h1>
+    All Prime Number Between 1 to 100
+</h1>
+@{
+    var l = 2;
+    
+}
+@while (l < 101)
+{
+    var flags = 0;
+    @for(var j = 2; j <= l / 2; j++)
+    {
+        @if (@l % @j == 0)
+        {
+            flags = 1;
+            
+        }
+
+
+     }
+    @if(flags == 0)
+    {
+        <text> Prime No: @l </text><br />
+    }
+    
+
+
+l++;
+}
