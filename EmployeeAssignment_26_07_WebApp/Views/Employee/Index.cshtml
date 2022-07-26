@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Empoyee Page";
+}
+<div>
+   <form action="/Employee/Data" method="post">
+  <div class="form-group">
+    <label for="FirstName">First Name</label>
+    <input type="text" class="form-control" id="FirstName" aria-describedby="emailHelp" name="FirstName" placeholder="Enter First Name">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="LastName">Last Name</label>
+    <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Enter Last Name">
+  </div>
+  <div class="form-group">
+    <label for="Mobile">Mobile No.</label>
+    <input type="number" class="form-control" id="Mobile" name="Mobile" placeholder="Mobile Number">
+  </div>
+  <div class="form-group">
+     <label for="Email">Email Address</label>
+    <input type="email" class="form-control" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter Email Address">
+    <small id="emailHelp" class="form-text text-muted"> We will  not share your Email with any else.</small>
+  </div>
+  <div class="row form-group">
+      <div class="col-sm-12 col-lg-2">
+          <div class="form-group">
+              <label for="Address1">Address 1</label>
+                <textarea id="Address1" name="Address_1"placeholder="Enter Adrress 1."></textarea>
+          </div>
+
+      </div>
+       <div class="col-sm-12 col-lg-2">
+    
+                  <label for="Address2">Address 2</label>
+                 <textarea id="Address2" name="Address_2" placeholder="Enter Adrress 2."> </textarea>
+ 
+
+      </div>
+
+  </div>
+  <div class="form-group mt-3">
+  <div class="row">
+      <div class="col-lg-4 col-sm-12">
+          <label for="city">City </label>
+          <input type="text" name="City" id="city" />
+
+
+      </div>
+      <div class="col-lg-4 col-sm-12">
+          <label for="postal">Postal </label>
+          <input type="number" name="Postal" id="postal" />
+
+
+      </div>
+      <div class="col-lg-4 col-sm-12">
+          <label for="country">Country </label>
+          <input type="text" name="Country" id="country" />
+
+
+      </div>
+
+  </div>
+  </div>
+ 
+  <div class="d-grid gap-2">
+  
+  <button class="btn btn-primary mt-3" type="submit">Button</button>
+</div>
+</form>
+</div>
