@@ -31,5 +31,12 @@ namespace EmployeeAssignment_26_07_WebApp.Controllers
 
             return Content($"OOps, SomeThing Wrong");
         }
+        [HttpGet]
+        public IActionResult GetAllEmployee()
+        {
+            var employees = _context.Employee.ToList(); 
+            var JsonEmployees= JsonConvert.SerializeObject(employees);
+            return Content(JsonEmployees);
+        }
     }
 }
